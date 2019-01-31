@@ -1,23 +1,15 @@
-function isLeapYear( year:number ) {
-    const divisibleByFour = (year:number):boolean => {
-        return year % 4 === 0 ? true : false
-    }
-
-    const divisibleByOnehundred = (year:number):boolean => {
-        return year % 100 === 0 ? true : false
-    }
-
-    const divisibleByFourhundred = (year:number):boolean => {
-        return year % 400 === 0 ? true : false
-    }
-
-    const isDivisibleByFour = divisibleByFour(year)
-    const isDivisibleByOnehundred = divisibleByOnehundred(year)
-    const isDivisibleByFourhundred = divisibleByFourhundred(year)
+function isLeapYear( year:number ):boolean {  
+    const isDivisibleByFour = divisibleBy(year, 4)
+    const isDivisibleByOnehundred = divisibleBy(year, 100)
+    const isDivisibleByFourhundred = divisibleBy(year, 400)
 
 
     const result = (isDivisibleByFour && !isDivisibleByOnehundred) || isDivisibleByFourhundred
     return result
+}
+
+const divisibleBy = (year:number, divisor:number):boolean => {
+    return year % divisor === 0 ? true : false
 }
 
 export default isLeapYear
