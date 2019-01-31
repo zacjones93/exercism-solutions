@@ -7,11 +7,11 @@ describe('Hello World', () => {
     expect(HelloWorld.hello()).toEqual('Hello, World!')
   })
 
-  xit('says hello to bob', () => {
+  it('says hello to bob', () => {
     expect(HelloWorld.hello('Bob')).toEqual('Hello, Bob!')
   })
 
-  xit('says hello to sally', () => {
+  it('says hello to sally', () => {
     expect(HelloWorld.hello('Sally')).toEqual('Hello, Sally!')
   })
 })

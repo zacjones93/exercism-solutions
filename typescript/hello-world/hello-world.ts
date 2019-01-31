@@ -1,6 +1,6 @@
 class HelloWorld {
-    static hello( /* Parameters go here */ ) {
-        // Your code here
+    static hello( subject:string="World" ) {
+        return `Hello, ${subject}!`
     }
 }
 
